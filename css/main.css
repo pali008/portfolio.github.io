@@ -1326,16 +1326,32 @@ header .logo a {
 }
 .intro-content h1 {
 	color: #FFFFFF;
-	font-family: "poppins-medium", sans-serif;
+	font-family:"poppins-medium", sans-serif;
 	font-size: 8.4rem;
 	line-height: 1.071;
-	max-width: 900px;
-	margin-top: 0;
-	margin-bottom: .6rem;
-	margin-left: auto;
-	margin-right: auto;
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	max-width: 900px;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .1em solid transparent; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: 
+	  typing 4s steps(30),
+	  blink-caret 5s;
 }
+/* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	30% { border-color:#FFFFFF; }
+  }
+
 .intro-content h5 {
 	color: #cc005f;
 	font-family: "poppins-bold", sans-serif;
