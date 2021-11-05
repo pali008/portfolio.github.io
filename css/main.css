@@ -1335,6 +1335,7 @@ header .logo a {
 	margin-right: auto;
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 	max-width: 900px;
+	white-space: pre; /* Keeps the content on a single line */
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
 	border-right: .1em solid transparent; /* The typwriter cursor */
 	letter-spacing: .15em; /* Adjust as needed */
